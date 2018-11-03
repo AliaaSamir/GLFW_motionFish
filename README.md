@@ -66,8 +66,9 @@ This program is simple for startting with GLFW so contains simple transformation
  
    * and so the second part which is for drawing the fish 
    
-   ** *texture* adding is shown in this part with comments **
+   ***texture* adding is shown in this part with comments**
    ```
+
 // load and create a texture 
 	// -------------------------
 	unsigned int texture;
@@ -81,7 +82,7 @@ This program is simple for startting with GLFW so contains simple transformation
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	// load image, create texture and generate mipmaps
 	int width, height, nrChannels;
-	// The FileSystem::getPath(...) is part of the GitHub repository so we can find files on any IDE/platform; replace it with your own image path.
+	//your own image path as first parameter 
 	unsigned char *data = stbi_load("images.jpg", &width, &height, &nrChannels, 0);
 	if (data)
 	{
@@ -95,6 +96,28 @@ This program is simple for startting with GLFW so contains simple transformation
 	}
 	stbi_image_free(data);   		
 ```
+   last importat thing **transformation**
+  ```
+  glm::mat4 transform;
+  transform = glm::translate(transform, glm::vec3(-0.05f, y, 0.0f));
+  ```
+  and in render loop 
+  
+  		// get matrix's uniform location and set matrix
+		fishShader.use();
+		unsigned int transformLoc = glGetUniformLocation(fishShader.ID, "transform");
+		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+  in renderi loop you must **Bind things before use
+   ```
+   		// bind Texture
+		containShader.use();
+		glBindTexture(GL_TEXTURE_2D, texture);
+		//bind drawing vertex array buffer   
+		glBindVertexArray(VAO2);
+		glDrawArrays(GL_POLYGON, 0, 4);
+		
+ ```
+ 
 ## useful tutorial 
 * this link will help you so much
 
