@@ -36,33 +36,33 @@ This program is simple for startting with GLFW so contains simple transformation
 ### basic parts
    the program consist of two main parts
    * first container which have the sea texture in Quad shape.this part has its owen shader 
-   '''
-   Shader containShader("texture.vs", "texture.fs");
-   '''
+  
+	   	Shader containShader("texture.vs", "texture.fs");
+
    and bufferes to manage the vertices attribute 
-   '''
-   float containerVertices[] = {
-		-1.0f, 1.0f, 0.0f,			0.0f, 0.0f, 0.0f,	0.0f, 1.0f,  //top right
-		 1.0f, 1.0f, 0.0f,			0.0f, 0.0f, 0.0f,	1.0f, 1.0f,  //top left
-		 1.0f,-1.0f, 0.0f,			0.0f, 0.0f, 0.0f,	1.0f, 0.0f,  //bottom left
-		-1.0f,-1.0f, 0.0f,			0.0f, 0.0f, 0.0f,	0.0f, 0.0f  //bottom right
-	};
-    
-  glBindVertexArray(VAO2);
+ 
+	   float containerVertices[] = {
+			-1.0f, 1.0f, 0.0f,			0.0f, 0.0f, 0.0f,	0.0f, 1.0f,  //top right
+			 1.0f, 1.0f, 0.0f,			0.0f, 0.0f, 0.0f,	1.0f, 1.0f,  //top left
+			 1.0f,-1.0f, 0.0f,			0.0f, 0.0f, 0.0f,	1.0f, 0.0f,  //bottom left
+			-1.0f,-1.0f, 0.0f,			0.0f, 0.0f, 0.0f,	0.0f, 0.0f  //bottom right
+		};
 
-  glBindBuffer(GL_ARRAY_BUFFER, VBO2);
-  glBufferData(GL_ARRAY_BUFFER, sizeof(containerVertices), containerVertices, GL_STATIC_DRAW);
+	  glBindVertexArray(VAO2);
 
-  //positin attribute
-  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
-  glEnableVertexAttribArray(0);
-  //color attribute
-  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
-  glEnableVertexAttribArray(1);
-  //texture attribute
-  glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
-  glEnableVertexAttribArray(2);
-   '''
+	  glBindBuffer(GL_ARRAY_BUFFER, VBO2);
+	  glBufferData(GL_ARRAY_BUFFER, sizeof(containerVertices), containerVertices, GL_STATIC_DRAW);
+
+	  //positin attribute
+	  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+	  glEnableVertexAttribArray(0);
+	  //color attribute
+	  glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+	  glEnableVertexAttribArray(1);
+	  //texture attribute
+	  glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+	  glEnableVertexAttribArray(2);
+ 
    
 
 ## useful tutorial 
