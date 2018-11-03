@@ -1,6 +1,6 @@
 # GLFW_motionFish
 
-##Installing 
+## Installing 
 * Fist for installing GLFW library follow this tutorial 
 
 (https://www.youtube.com/watch?v=OR4fNpBjmq8)
@@ -27,6 +27,7 @@ Fragment Shader transform.fs and texture.fs
 Vertex Shader   transform.vs and texture.vs
 
 
+## program discreption
 This program is simple for startting with GLFW so contains simple transformation and texture to output a fish move in sea 
 ###
 ![](https://media.giphy.com/media/5UrVo5LYFBEE1kfZxV/giphy.gif)
