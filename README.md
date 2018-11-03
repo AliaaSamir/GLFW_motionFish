@@ -59,7 +59,8 @@ This program is simple for startting with GLFW so contains simple transformation
  
    * Second part which is for drawing the fish similar to first one 
    
-   ***Texture* adding code is shown in this part with comments **
+   **Texture** 
+   * Here is part of code show load and create a texture 
    ```
 
 // load and create a texture 
@@ -100,7 +101,8 @@ This program is simple for startting with GLFW so contains simple transformation
 		glDrawArrays(GL_POLYGON, 0, 4);
 		
  ```
-  **transformation** 
+  **Transformation** 
+   * Here is an example in our code 'translate' you may want to use 'rotate' or 'scale'
   ```
   glm::mat4 transform;
   transform = glm::translate(transform, glm::vec3(-0.05f, y, 0.0f));
