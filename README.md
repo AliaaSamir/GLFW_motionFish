@@ -17,14 +17,14 @@ https://glm.g-truc.net/0.9.8/index.html
 
 * Then you will need to add some library to your project 
 
-[stb_image.h]          for adding image for texture  
+[stb_image.h](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/stb_image.h)          for adding image for texture  
 
-[shader.h]             for shader 
+[shader.h](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/Shader.h)             for shader 
 
 and the shaders it self 
 
-Fragment Shader [transform.fs] and [texture.fs]
-Vertex Shader   [transform.vs] and [texture.vs]
+Fragment Shader [transform.fs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/transform.fs) and [texture.fs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/texture.fs)
+Vertex Shader   [transform.vs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/transform.vs) and [texture.vs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/texture.vs)
 
 
 ## program discription
