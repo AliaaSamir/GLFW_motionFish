@@ -17,14 +17,14 @@
 
 * Then you will need to add some library to your project 
 
-[stb_image.h](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/stb_image.h)       for adding image for texture.  
+    [stb_image.h](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/stb_image.h)       for adding image for texture.  
 
-[shader.h](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/Shader.h)             for shader. 
+    [shader.h](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/Shader.h)             for shader. 
 
-and the shaders itself. 
+    and the shaders itself. 
 
-Fragment Shader [transform.fs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/transform.fs) and [texture.fs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/texture.fs).
-Vertex Shader   [transform.vs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/transform.vs) and [texture.vs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/texture.vs).
+        Fragment Shader [transform.fs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/transform.fs) and [texture.fs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/texture.fs).
+        Vertex Shader   [transform.vs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/transform.vs) and [texture.vs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/texture.vs).
 
 
 ## program discription
