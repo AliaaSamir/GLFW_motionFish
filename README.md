@@ -2,40 +2,33 @@
 
 ## Installing 
 * Fist for installing GLFW library follow this tutorial: 
-
     (https://www.youtube.com/watch?v=OR4fNpBjmq8)
     
 * There is a need for:
-
 * GLEW library for openGl functions you can find it in this link. 
-
     http://www.glfw.org/
 
 * GLM library for mathematics needed for transformation.
-
     https://glm.g-truc.net/0.9.8/index.html
 
 * Then you will need to add some library to your project 
-
     [stb_image.h](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/stb_image.h)       for adding image for texture.  
-
     [shader.h](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/Shader.h)             for shader. 
 
     and the shaders itself. 
-
      Fragment Shader [transform.fs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/transform.fs) and [texture.fs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/texture.fs).
      Vertex Shader   [transform.vs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/transform.vs) and [texture.vs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/texture.vs).
 
 
-## program discription
+## Program discription
 This program is simple for startting with GLFW so contains simple transformation and texture to output a fish move in sea 
 ###
 
 ![](https://media.giphy.com/media/5UrVo5LYFBEE1kfZxV/giphy.gif)
 
-### basic parts
-   the program consist of two main parts
-   * first container which have the sea texture in Quad shape.
+### Basic parts
+   The program consist of two main parts
+   * First container which have the sea texture in Quad shape.
    this part has its owen shader 
   
 	Shader containShader("texture.vs", "texture.fs");
@@ -64,9 +57,9 @@ This program is simple for startting with GLFW so contains simple transformation
 	  glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
 	  glEnableVertexAttribArray(2);
  
-   * and so the second part which is for drawing the fish 
+   * Second part which is for drawing the fish similar to first one 
    
-   ***texture* adding is shown in this part with comments**
+   ***Texture* adding code is shown in this part with comments **
    ```
 
 // load and create a texture 
@@ -96,18 +89,8 @@ This program is simple for startting with GLFW so contains simple transformation
 	}
 	stbi_image_free(data);   		
 ```
-   last importat thing **transformation**
-  ```
-  glm::mat4 transform;
-  transform = glm::translate(transform, glm::vec3(-0.05f, y, 0.0f));
-  ```
-  and in render loop 
-  
-  		// get matrix's uniform location and set matrix
-		fishShader.use();
-		unsigned int transformLoc = glGetUniformLocation(fishShader.ID, "transform");
-		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
-  in renderi loop you must **Bind things before use
+
+  * In render loop you need to **Bind** texture before drawing
    ```
    		// bind Texture
 		containShader.use();
@@ -117,6 +100,18 @@ This program is simple for startting with GLFW so contains simple transformation
 		glDrawArrays(GL_POLYGON, 0, 4);
 		
  ```
+  **transformation** 
+  ```
+  glm::mat4 transform;
+  transform = glm::translate(transform, glm::vec3(-0.05f, y, 0.0f));
+  ```
+   * In render loop you need to get matrix's uniform location and set matrix
+  
+  		// get matrix's uniform location and set matrix
+		fishShader.use();
+		unsigned int transformLoc = glGetUniformLocation(fishShader.ID, "transform");
+		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+
  
 ## useful tutorial 
 * this link will help you so much
