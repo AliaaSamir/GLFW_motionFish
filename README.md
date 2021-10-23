@@ -20,7 +20,7 @@
      Vertex Shader   [transform.vs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/transform.vs) and [texture.vs](https://github.com/AliaaSamir/GLFW_motionFish/blob/master/texture.vs).
 
 
-## Program discription
+## Program description
 This program is simple for startting with GLFW so contains simple transformation and texture to output a fish move in sea 
 ###
 
